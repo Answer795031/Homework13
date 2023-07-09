@@ -7,11 +7,17 @@ public class Book {
     private Author author;
     private int year; // год публикации
 
+    public Book(String bookName, Author author, int year){
+        this.bookName = bookName;
+        this.year = year;
+        this.author = author;
+    }
+
     @Override
     public String toString() {
         // переопределение метода toString для корректного вывода данных о книге
 
-        return getBookName();
+        return "\nКнига: \"" + getBookName() + "\"\nГод публикации: " + getYear() + "\n" + getAuthor();
     }
 
     @Override
@@ -25,12 +31,6 @@ public class Book {
     @Override
     public int hashCode() {
         return Objects.hash(bookName, author, year);
-    }
-
-    public Book(String bookName, Author author, int year){
-        this.bookName = bookName;
-        this.year = year;
-        this.author = author;
     }
 
     public String getBookName(){

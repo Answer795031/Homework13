@@ -6,11 +6,16 @@ public class Author {
     private String authorName; // имя автора
     private String authorSurname; // фамилия автора
 
+    public Author(String authorName, String authorSurname){
+        this.authorName = authorName;
+        this.authorSurname = authorSurname;
+    }
+
     @Override
     public String toString() {
         // переопределение метода toString для корректного вывода данных об авторе
 
-        return getAuthorName() + " " + getAuthorSurname();
+        return "Имя автора: " + getAuthorName() + "\nФамилия автора: " + getAuthorSurname();
     }
 
     @Override
@@ -24,11 +29,6 @@ public class Author {
     @Override
     public int hashCode() {
         return Objects.hash(authorName, authorSurname);
-    }
-
-    public Author(String authorName, String authorSurname){
-        this.authorName = authorName;
-        this.authorSurname = authorSurname;
     }
 
     public String getAuthorName(){

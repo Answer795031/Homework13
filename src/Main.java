@@ -9,19 +9,19 @@ public class Main {
         // создаем объекты joanneRowling и harryPotter
         Author joanneRowling = new Author("Джоан", "Роулинг");
         Book harryPotter = new Book("Гарри Поттер и философский камень", joanneRowling, 1997);
-        // Вызов методов
 
-        System.out.println("\nКнига: \"" + warAndPeace.getBookName() + "\"\nГод публикации: " + warAndPeace.getYear()
-                + "\nАвтор: " + warAndPeace.getAuthor());
+        System.out.println(warAndPeace);
+        System.out.println(harryPotter);
 
-        System.out.println("\nКнига: \"" + harryPotter.getBookName() + "\"\nГод публикации: " + harryPotter.getYear()
-                + "\nАвтор: " + harryPotter.getAuthor());
+        System.out.println("\nХэш-код объекта warAndPeace: " + warAndPeace.hashCode());
+        System.out.println("\nХэш-код объекта harryPotter: " + harryPotter.hashCode());
+
+        System.out.println("\nПроверка объектов на равенство: " + warAndPeace.equals(harryPotter));
 
         harryPotter.setYear(2000);
         // изменяем год публикации (Марти Макфлай, перестань баловаться) с помощью сеттера
 
-        System.out.println("\nКнига: \"" + harryPotter.getBookName() + "\"\nГод публикации: " + harryPotter.getYear()
-                + "\nАвтор: " + harryPotter.getAuthor());
+        System.out.println(harryPotter);
 
     }
 }
